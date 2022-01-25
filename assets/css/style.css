@@ -134,6 +134,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   background: rgb(0 0 0 / 70%);
+  overflow: hidden;
 }
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
@@ -157,7 +158,47 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 26px;
   }
 }
+.logo{
+  position: absolute;
+  margin-left: 49%;
+  margin-top: -16%;
+  width: 15%;
+}
+.logo2{
+  position: absolute;
+  margin-left: 63%;
+  margin-top: -16%;
+  width: 13%;
+  /* transition: transform .3s ease-in-out; */
+  /* animation: logo-left-part-appear 1s 1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: logo-left-part-appear; */
+    -webkit-animation: anim 2s linear;
+    -webkit-animation-iteration-count: 1;    
+    animation: anim 2s linear;
+    animation-iteration-count: 1;
+}
+.logo2:hover {
+  -webkit-animation: anim 2s linear ;           
+    animation: anim 2s infinite linear;  
+  /* transform: rotate(360deg); */
+  /* transform: translate(-0.670833px, -2.63333px); */
+}
+@-webkit-keyframes anim {
+  from { -webkit-transform: rotateX(0deg); }
+  to { -webkit-transform: rotateX(360deg); }
+}
 
+@keyframes anim {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(360deg); }
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
