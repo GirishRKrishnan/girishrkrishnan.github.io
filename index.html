@@ -23,6 +23,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -71,26 +72,29 @@
       
       <div class="social-links">
         
-        <script type='text/javascript'>
-
-          function copy()
-          {
-            copyText = "mailtogirishkrishna@gmail.com"
-              navigator.clipboard.writeText(copyText);
-              /* Alert the copied text */
-             
-          }
-          
-          </script>
-        <a href="#" class="twitter"  onclick='copy()'><i class="bi bi-envelope-fill"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://linkedin.com/in/girish-r-krishnan-578366166" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        
+        
+        <a href="#" class="twitter"  onclick="copyToClipboard()" title="Email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="https://www.facebook.com/girish0003" class="facebook" title="Fb Profile"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram" ></i></a>
+        <a href="https://linkedin.com/in/girish-r-krishnan-578366166" class="linkedin" title="linkedin" ><i class="bi bi-linkedin"></i></a>
+        <a href="./assets/img/GirishRKrishnan-Resume2022.pdf" class="instagram" title="Download Resume"><i class="bi bi-download"></i></a>
       </div>
-
+      <div id="snackbar">Mail Id Copied</div>
     </div>
   </header><!-- End Header -->
+<script type='text/javascript'>
 
+function copyToClipboard() {
+  navigator.clipboard.writeText
+                ("mailtogirishkrishna@gmail.com");
+                
+                var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);             
+}
+          
+          </script>
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
 
@@ -448,8 +452,12 @@
       <div class="section-title">
         <h2>Resume</h2>
         <p>Check My Resume</p>
+      
+      <div style="float:right;">
+        <a href="./assets/img/GirishRKrishnan-Resume2022.pdf" class="instagram">Click To Download Resume</a>
       </div>
-
+      </div >
+      <div></div>
       <div class="row">
         <div class="col-lg-6">
           <h3 class="resume-title">Sumary</h3>
